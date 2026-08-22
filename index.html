@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,18 +7,31 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
   <title>google classroom</title>
-  <meta name="description" content="Modern Client Launcher" />
+  <meta name="description" content="Ruian Client Launcher" />
   <link rel="icon" type="image/png" href="7878.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=20260319" />
+  <style>
+    .main-title {
+      font-family: "Press Start 2P", monospace;
+      font-size: clamp(1.1rem, 3.5vw, 2rem);
+      color: #e1b741;
+      text-align: center;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(225, 183, 65, 0.5), 0 0 24px rgba(225, 183, 65, 0.3);
+      letter-spacing: 2px;
+      line-height: 1.4;
+    }
+  </style>
 </head>
 <body>
   <div id="app" class="app" @mousemove="onMouseMove">
     <div class="bg-layer bg-image"></div>
 
     <header class="header in-up" :class="{show: ready}">
+      <h1 class="main-title">Ruian client</h1>
     </header>
 
     <main class="launcher card in-up delay-1" :class="{show: ready}">
@@ -49,7 +62,7 @@
     </main>
 
     <div class="beta-warning in-up delay-2" :class="{show: ready}">
-      Warning! Modern Client is currently in Beta Testing, if you would like to give feedback on the client please check out the discord server at the top right of the website!
+      Warning! Ruian Client is currently in Beta Testing, if you would like to give feedback on the client please check out the discord server at the top right of the website!
     </div>
   </div>
 
