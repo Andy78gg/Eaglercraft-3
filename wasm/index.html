@@ -35,7 +35,7 @@
 					console.log("Downloading assets.epk...");
 					var assetsEPK;
 					try {
-						assetsEPK = new Uint8Array(await fetch("assets.epk?v=2.0.3").then(resp => resp.arrayBuffer()));
+						assetsEPK = new Uint8Array(await fetch("assets.epk?v=2.0.4").then(resp => resp.arrayBuffer()));
 					}catch(ex) {
 						alert("Could not download assets.epk!");
 						console.error("Could not download assets.epk!");
