@@ -57,6 +57,13 @@
           </div>
         </div>
 
+        <div class="boost-toggle" @click="boostEnabled = !boostEnabled" role="switch" :aria-checked="boostEnabled" tabindex="0" @keydown.enter.prevent="boostEnabled = !boostEnabled">
+          <span class="boost-switch" :class="{on: boostEnabled}"><span class="knob"></span></span>
+          <span class="boost-label">
+            <strong>性能增强 Mod</strong>
+            <small>LOD 区块加载 · 实体加载优化 · FPS 提升</small>
+          </span>
+        </div>
         <button class="btn primary mc-btn launch-btn" type="button" @click="launchSelectedBuild">Launch</button>
       </div>
     </main>

@@ -299,3 +299,71 @@ html, body {
     line-height: 1.35;
   }
 }
+
+/* ---- EaglerBoost 性能增强 Mod 开关 ---- */
+.boost-toggle {
+  margin-top: 1rem;
+  width: min(380px, 100%);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #3a4155;
+  background: rgba(27, 31, 40, 0.85);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.boost-toggle:hover,
+.boost-toggle:focus-visible {
+  border-color: #e1b741;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+.boost-switch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 24px;
+  border: 1px solid #3a4155;
+  background: #111620;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.boost-switch .knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: #aab3c7;
+  transition: left 0.2s ease, background 0.2s ease;
+}
+.boost-switch.on {
+  background: #e1b741;
+  border-color: #cfa63b;
+}
+.boost-switch.on .knob {
+  left: 22px;
+  background: #111620;
+}
+.boost-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  text-align: left;
+}
+.boost-label strong {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.62rem;
+  color: #ffecb3;
+  letter-spacing: 0.5px;
+}
+.boost-label small {
+  margin-top: 0.28rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: #aab3c7;
+}
+@media (max-width: 880px) {
+  .boost-label small { font-size: 0.64rem; }
+}

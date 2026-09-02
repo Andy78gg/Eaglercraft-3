@@ -10,6 +10,7 @@ createApp({
         { value: 'wasm', label: 'WASM Build' }
       ],
       selectedBuild: { value: 'wasm', label: 'WASM Build' },
+      boostEnabled: localStorage.getItem('boostEnabled') !== '0',
     };
   },
   methods: {
@@ -19,7 +20,10 @@ createApp({
     },
     launchSelectedBuild() {
       const route = this.selectedBuild.value === 'wasm' ? './wasm/' : './js/';
-      window.location.assign(route);
+      const boost = this.boostEnabled ? '1' : '0';
+      localStorage.setItem('boostEnabled', boost);
+      const sep = route.indexOf('?') === -1 ? '?' : '&';
+      window.location.assign(route + sep + 'boost=' + boost);
     },
     onMouseMove(event) {
       const w = window.innerWidth || 1;
